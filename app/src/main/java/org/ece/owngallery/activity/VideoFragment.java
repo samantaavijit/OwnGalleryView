@@ -28,7 +28,6 @@ public class VideoFragment extends Fragment implements loadAllVideoMediaInterfac
 
 	public static final String PACKAGE = "org.ece.owngallery";
     private TextView emptyView;
-	private GridView mView;
 	private Context mContext;
 	private int itemWidth = 100;
 	private ListAdapter listAdapter;
@@ -43,8 +42,8 @@ public class VideoFragment extends Fragment implements loadAllVideoMediaInterfac
 		return v;
 	}
 	
-	private void initializeView(View v){ 
-		mView=(GridView)v.findViewById(R.id.grid_view);
+	private void initializeView(View v){
+		GridView mView = (GridView) v.findViewById(R.id.grid_view);
 		mView.setAdapter(listAdapter = new ListAdapter(mContext));
 
         int position = mView.getFirstVisiblePosition();

@@ -39,6 +39,7 @@ public class PhotoPreviewActivity extends ActionBarActivity implements OnPageCha
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Bundle mBundle=getIntent().getExtras();
+		assert mBundle != null;
 		folderPosition= mBundle.getInt("Key_FolderID");
 		current= mBundle.getInt("Key_ID");
 		
@@ -52,10 +53,8 @@ public class PhotoPreviewActivity extends ActionBarActivity implements OnPageCha
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
+		if (item.getItemId() == android.R.id.home) {
 			onBackPressed();
-			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}

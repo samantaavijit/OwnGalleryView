@@ -31,8 +31,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class GalleryFragment extends Fragment {
 
-	public static final String PACKAGE = "org.ece.owngallery";
-    private TextView emptyView;
 	private GridView mView;
 	private Context mContext;
 	
@@ -56,7 +54,7 @@ public class GalleryFragment extends Fragment {
 	
 	private void initializeView(View v){ 
 		mView=(GridView)v.findViewById(R.id.grid_view);
-        emptyView = (TextView)v.findViewById(R.id.searchEmptyView);
+		TextView emptyView = (TextView) v.findViewById(R.id.searchEmptyView);
         emptyView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
